@@ -1,11 +1,12 @@
 from selenium import webdriver
+from config import chrome_driver_path
 
-driver = webdriver.Chrome('/Users/linhuanjia/Documents/python/chromedriver')
+driver = webdriver.Chrome(chrome_driver_path)
 
 driver.get('https://github.com/')
 
 cookies = driver.get_cookies()
 
-driver.save_screenshot('github.png')
+# driver.save_screenshot('github.png')
 
 print('cookies is %s' % cookies)
